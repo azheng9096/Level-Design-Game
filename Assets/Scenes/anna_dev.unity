@@ -2705,6 +2705,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PickUpItem
       objectReference: {fileID: 0}
+    - target: {fileID: 6630752992919805680, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630752992919805680, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.22508392
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630752992919805680, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18241365
+      objectReference: {fileID: 0}
     - target: {fileID: 6630752992919805681, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2749,6 +2761,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6630752992919805682, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: a78b8bb720de5c84d9e20529a33b67f1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
 --- !u!1001 &8203460489574273155
