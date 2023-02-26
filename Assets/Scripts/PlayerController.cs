@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movement;
 
-    bool canMove = true;
+    public bool canMove = true;
+
+    public bool detectable = true; // can be detected by enemies
 
     // [SerializeField] FieldOfView fov;
 
@@ -48,5 +50,21 @@ public class PlayerController : MonoBehaviour
 
     public void TempDisableMovement(float duration) {
         StartCoroutine(TempDisableMovementIE(duration));
+    }
+
+    public void ToggleMovement(bool val) {
+        if (!val) {
+            canMove = false;
+            rb.velocity = Vector2.zero;
+        } else {
+            canMove = true;
+        }
+    }
+
+    public void Hide(bool val) {
+        detectable = !val;
+        ToggleMovement(!val);
+        GetComponent<BoxCollider2D>().enabled = !val;
+        GetComponent<SpriteRenderer>().enabled = !val;
     }
 }

@@ -23,6 +23,7 @@ public class Patrol : MonoBehaviour
     Rigidbody2D rb;
 
     GameObject player;
+    PlayerController playerController;
 
     void Start()
     {
@@ -35,13 +36,14 @@ public class Patrol : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         player = GameObject.FindGameObjectWithTag("Player");
+        playerController = player?.GetComponent<PlayerController>();
     }
 
     void Update() {
         fieldOfView.SetOrigin(transform.position);
         fieldOfView.SetAimDirection(transform.right);
 
-        FIndTargetPlayer();
+        FindTargetPlayer();
     }
 
     IEnumerator MovingToNextWaypoint()
@@ -63,8 +65,8 @@ public class Patrol : MonoBehaviour
         prevCoroutine = StartCoroutine(MovingToNextWaypoint());
     }
 
-    void FIndTargetPlayer() {
-        if(Vector3.Distance(transform.position, player.transform.position) < viewDistance) {
+    void FindTargetPlayer() {
+        if(playerController.detectable && Vector3.Distance(transform.position, player.transform.position) < viewDistance) {
             // Player inside view distance
             Vector2 dirToPlayer = (player.transform.position - transform.position).normalized;
             Vector3 aimDirection = transform.right;
