@@ -2731,10 +2731,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7379152821614086610, guid: 4af7c2f5b5a6517408ebe0cff604c817, type: 3}
-      propertyPath: autoBreakOnUnlock
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7379152821614086617, guid: 4af7c2f5b5a6517408ebe0cff604c817, type: 3}
       propertyPath: m_Name
       value: Door2
