@@ -5001,7 +5001,7 @@ MonoBehaviour:
   openAudio: {fileID: 0}
   unlockAudio: {fileID: 0}
   particle: {fileID: 7379152823140253014}
-  autoBreakOnUnlock: 1
+  autoBreakOnUnlock: 0
   particleRespawnable: {fileID: 1118489450594818042}
 --- !u!1 &7379152823140253011
 GameObject:

@@ -62,7 +62,7 @@ public class Door2 : MonoBehaviour
         if (autoBreakOnUnlock) {
             return;
         }
-
+        
         if (canInteract && Input.GetKeyDown(KeyCode.Z)){
             if (numTriggers <= currTriggered) {
                 // play open audio
