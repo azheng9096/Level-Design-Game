@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     bool canMove = true;
 
+    // [SerializeField] FieldOfView fov;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,12 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         movement = new Vector2(x, y).normalized;
+
+        // FOV object has to be at (0, 0, 0) position or else it will not be correctly aligned
+        // fov.SetAimDirection(movement);
+        // fov.SetOrigin(transform.position);
+        // fov.SetFov(90f);
+        // fov.SetViewDistance(10f);
     }
 
     void FixedUpdate() {
