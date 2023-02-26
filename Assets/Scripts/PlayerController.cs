@@ -15,10 +15,18 @@ public class PlayerController : MonoBehaviour
 
     // [SerializeField] FieldOfView fov;
 
+
+    // animation
+    Animator animator;
+    SpriteRenderer sprite;
+
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -33,12 +41,19 @@ public class PlayerController : MonoBehaviour
         // fov.SetOrigin(transform.position);
         // fov.SetFov(90f);
         // fov.SetViewDistance(10f);
+        if (canMove && sprite != null && sprite.enabled) {
+            if (x < 0) sprite.flipX = true;
+            else if (x > 0) sprite.flipX = false;
+        }
+
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     void FixedUpdate() {
-        if (canMove)
+        if (canMove) {
             rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
             // rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
+        }
     }
 
     IEnumerator TempDisableMovementIE(float duration) {
