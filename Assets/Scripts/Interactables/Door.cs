@@ -16,7 +16,7 @@ public class Door : MonoBehaviour
     bool canInteract = false;
 
     // particle
-    [SerializeField] ParticleSystem particleSystem;
+    [SerializeField] ParticleSystem particle;
 
     // Start is called before the first frame update
     void Start()
@@ -38,9 +38,9 @@ public class Door : MonoBehaviour
                 }
 
                 // play particle effect
-                if (particleSystem != null) {
-                    particleSystem.Play();
-                    particleSystem.gameObject.transform.SetParent(null);
+                if (particle != null) {
+                    particle.Play();
+                    particle.gameObject.transform.SetParent(null);
                 }
 
                 Destroy(gameObject);

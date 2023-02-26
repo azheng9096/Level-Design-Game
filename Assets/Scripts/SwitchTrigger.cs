@@ -15,7 +15,7 @@ public class SwitchTrigger : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        toSwitchTriggerSpawnpoint = toSwitchTrigger.transform.GetChild(0).transform;
+        toSwitchTriggerSpawnpoint = toSwitchTrigger.GetChild(0).transform;
     }
 
     // Update is called once per frame
