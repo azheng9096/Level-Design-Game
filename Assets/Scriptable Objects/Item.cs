@@ -13,4 +13,6 @@ public class Item : ScriptableObject
 
     public Sprite detailSprite;
     public string description;
+
+    public string pickUpDialogue;
 }

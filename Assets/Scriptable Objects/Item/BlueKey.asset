@@ -17,3 +17,4 @@ MonoBehaviour:
   pickUpAudio: {fileID: 0}
   detailSprite: {fileID: 0}
   description: Opens a door
+  pickUpDialogue: I found a Blue Key

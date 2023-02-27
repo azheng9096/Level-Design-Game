@@ -38,6 +38,9 @@ public class InteractablePickUp : MonoBehaviour
             audioSource.PlayOneShot(item.pickUpAudio);
         }
 
+        // display pickup text
+        DialogueManager.instance.DisplayText(item.pickUpDialogue);
+
         if (dontDestroyOnPickup) {
             item = null;
             return;
