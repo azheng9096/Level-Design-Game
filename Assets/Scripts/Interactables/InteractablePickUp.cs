@@ -10,6 +10,8 @@ public class InteractablePickUp : MonoBehaviour
 
     AudioSource audioSource;
 
+    [SerializeField] bool dontDestroyOnPickup = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,8 @@ public class InteractablePickUp : MonoBehaviour
     void Update()
     {
         if (canPickUp && Input.GetKeyDown(KeyCode.Z)) {
-            PickUp();
+            if (item != null)
+                PickUp();
         }
     }
 
@@ -33,6 +36,11 @@ public class InteractablePickUp : MonoBehaviour
         // play pick up audio
         if (audioSource != null && item.pickUpAudio != null) {
             audioSource.PlayOneShot(item.pickUpAudio);
+        }
+
+        if (dontDestroyOnPickup) {
+            item = null;
+            return;
         }
 
         // destroy object
