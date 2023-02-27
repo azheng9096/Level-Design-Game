@@ -46,7 +46,7 @@ public class Closet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         // cannot enter closet from back side
-        if (other.collider.CompareTag("Player") && other.contacts[0].normal.y < 0.5f) {
+        if (other.collider.CompareTag("Player")) { // && other.contacts[0].normal.y < 0.5f
             canInteract = true;
         }
     }
