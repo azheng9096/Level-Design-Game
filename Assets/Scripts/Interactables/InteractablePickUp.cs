@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class InteractablePickUp : MonoBehaviour
 {
-    [SerializeField] Item item;
+    [SerializeField] protected Item item;
 
-    bool canPickUp = false;
+    protected bool canPickUp = false;
 
-    AudioSource audioSource;
+    protected AudioSource audioSource;
 
-    [SerializeField] bool dontDestroyOnPickup = false;
+    [SerializeField] protected bool dontDestroyOnPickup = false;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         audioSource = GameObject.FindGameObjectWithTag("Player")?.GetComponent<AudioSource>();
     }
@@ -27,7 +27,7 @@ public class InteractablePickUp : MonoBehaviour
         }
     }
 
-    void PickUp() {
+    protected virtual void PickUp() {
         canPickUp = false;
 
         // add item to inventory
@@ -47,14 +47,27 @@ public class InteractablePickUp : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
+    protected virtual void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             canPickUp = true;
         }
     }
 
-    void OnTriggerExit2D(Collider2D other) {
+    protected virtual void OnTriggerExit2D(Collider2D other) {
         if (other.CompareTag("Player")) {
+            canPickUp = false;
+        }
+    }
+
+
+    protected void OnCollisionEnter2D(Collision2D other) {
+        if (other.collider.CompareTag("Player")) {
+            canPickUp = true;
+        }
+    }
+
+    protected void OnCollisionExit2D(Collision2D other) {
+        if (other.collider.CompareTag("Player")) {
             canPickUp = false;
         }
     }
