@@ -18,6 +18,9 @@ public class Door : MonoBehaviour
     // particle
     [SerializeField] ParticleSystem particle;
 
+    // other instance
+    [SerializeField] Door otherInstance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +45,10 @@ public class Door : MonoBehaviour
                     particle.Play();
                     particle.gameObject.transform.SetParent(null);
                 }
+
+                // destroy the other instance if it exists
+                if (otherInstance != null)
+                    Destroy(otherInstance.gameObject);
 
                 Destroy(gameObject);
             } else {

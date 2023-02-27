@@ -33,6 +33,8 @@ public class Door2 : MonoBehaviour
     OnCurrKeysChanged OnUnlockCallback; // triggers when currTriggered == numTriggers
     OnCurrKeysChanged OnCurrKeysChangedCallback; 
 
+    [SerializeField] Door2 otherInstance;
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +64,7 @@ public class Door2 : MonoBehaviour
         if (autoBreakOnUnlock) {
             return;
         }
-        
+
         if (canInteract && Input.GetKeyDown(KeyCode.Z)){
             if (numTriggers <= currTriggered) {
                 // play open audio
@@ -75,6 +77,10 @@ public class Door2 : MonoBehaviour
                     particle.Play();
                     particle.gameObject.transform.SetParent(null);
                 }
+
+                // destroy the other instance if it exists
+                if (otherInstance != null)
+                    Destroy(otherInstance.gameObject);
 
                 Destroy(gameObject);
             } else {
@@ -99,6 +105,9 @@ public class Door2 : MonoBehaviour
     public void IncrementTriggered() {
         currTriggered++;
 
+        if (otherInstance != null)
+            otherInstance.IncrementTriggered();
+
         OnCurrKeysChangedCallback?.Invoke();
         if (currTriggered == numTriggers)
             OnUnlockCallback?.Invoke();
@@ -106,6 +115,9 @@ public class Door2 : MonoBehaviour
 
     public void DecrementTriggered() {
         currTriggered--;
+
+        if (otherInstance != null)
+            otherInstance.DecrementTriggered();
 
         OnCurrKeysChangedCallback?.Invoke();
         if (currTriggered == numTriggers)
