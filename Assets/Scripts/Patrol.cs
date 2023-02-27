@@ -108,7 +108,7 @@ public class Patrol : MonoBehaviour
             Vector3 aimDirection = transform.right;
             if (Vector3.Angle(aimDirection, dirToPlayer) < fov / 2f) {
                 // Player inside FOV
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                GameManager.instance.RetryFromSpawnpoint();
             }
         }
     }

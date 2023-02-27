@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     SpriteRenderer sprite;
 
+    // spawnpoint
+    Vector3 spawnpoint;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+
+        spawnpoint = transform.position;
     }
 
     // Update is called once per frame
@@ -82,5 +87,9 @@ public class PlayerController : MonoBehaviour
         ToggleMovement(!val);
         GetComponent<BoxCollider2D>().enabled = !val;
         GetComponent<SpriteRenderer>().enabled = !val;
+    }
+
+    public void ResetPositionToSpawnpoint() {
+        transform.position = spawnpoint;
     }
 }
