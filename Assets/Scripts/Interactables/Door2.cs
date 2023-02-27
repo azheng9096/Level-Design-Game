@@ -21,12 +21,16 @@ public class Door2 : MonoBehaviour
     [SerializeField] ParticleSystem particle;
     
     
-    // alt
+    // particle alt
     [SerializeField] bool autoBreakOnUnlock = false;
     // [SerializeField] GameObject particlePrefab;
     [SerializeField] ParticleSystem particleRespawnable;
     SpriteRenderer sprite;
     BoxCollider2D boxCollider2D;
+
+
+    // dialogue
+    [SerializeField] string lockedDialogue;
 
 
     delegate void OnCurrKeysChanged();
@@ -84,6 +88,8 @@ public class Door2 : MonoBehaviour
 
                 Destroy(gameObject);
             } else {
+                DialogueManager.instance.DisplayText(lockedDialogue);
+
                 // play lock audio
                 if (audioSource != null && lockedAudio != null) {
                     audioSource.PlayOneShot(lockedAudio);

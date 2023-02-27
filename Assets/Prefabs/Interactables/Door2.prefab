@@ -4946,7 +4946,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.74114686, g: 0.77254903, b: 0.21568626, a: 1}
   m_FlipX: 0
@@ -5003,6 +5003,8 @@ MonoBehaviour:
   particle: {fileID: 7379152823140253014}
   autoBreakOnUnlock: 0
   particleRespawnable: {fileID: 1118489450594818042}
+  lockedDialogue: It's locked...
+  otherInstance: {fileID: 0}
 --- !u!1 &7379152823140253011
 GameObject:
   m_ObjectHideFlags: 0

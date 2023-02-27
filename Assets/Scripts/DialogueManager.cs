@@ -57,6 +57,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // end
+        currDisplayCoroutine = null;
         yield break;
     }
 

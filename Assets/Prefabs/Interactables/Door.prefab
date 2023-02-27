@@ -129,6 +129,7 @@ MonoBehaviour:
   lockedAudio: {fileID: 0}
   openAudio: {fileID: 0}
   particle: {fileID: 3197603356217989958}
+  lockedDialogue: It's locked...
   otherInstance: {fileID: 0}
 --- !u!1001 &5364470592757448110
 PrefabInstance:

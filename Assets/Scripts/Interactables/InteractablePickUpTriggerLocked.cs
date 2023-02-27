@@ -16,6 +16,9 @@ public class InteractablePickUpTriggerLocked : InteractablePickUp
     [SerializeField] ParticleSystem particle;
 
 
+    // dialogue
+    [SerializeField] string lockedDialogue;
+
     delegate void OnCurrKeysChanged();
     OnCurrKeysChanged OnUnlockCallback; // triggers when currTriggered == numTriggers
 
@@ -40,11 +43,14 @@ public class InteractablePickUpTriggerLocked : InteractablePickUp
                         particle.gameObject.transform.SetParent(null);
                     }
                 }
-                
+
                 PickUp();
             }
             else {
-                audioSource.PlayOneShot(lockedAudio);
+                DialogueManager.instance.DisplayText(lockedDialogue);
+                
+                if (audioSource != null && lockedAudio != null)
+                    audioSource.PlayOneShot(lockedAudio);
             }
         }
     }

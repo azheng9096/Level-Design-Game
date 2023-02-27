@@ -18,6 +18,9 @@ public class Door : MonoBehaviour
     // particle
     [SerializeField] ParticleSystem particle;
 
+    // dialogue
+    [SerializeField] string lockedDialogue;
+
     // other instance
     [SerializeField] Door otherInstance;
 
@@ -52,6 +55,8 @@ public class Door : MonoBehaviour
 
                 Destroy(gameObject);
             } else {
+                DialogueManager.instance.DisplayText(lockedDialogue);
+                
                 // play lock audio
                 if (audioSource != null && lockedAudio != null) {
                     audioSource.PlayOneShot(lockedAudio);

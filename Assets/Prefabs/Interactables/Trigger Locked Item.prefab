@@ -106,6 +106,7 @@ MonoBehaviour:
   lockedAudio: {fileID: 0}
   breakOnPickup: 0
   particle: {fileID: 2807210543097013}
+  lockedDialogue: It's locked...
 --- !u!61 &7357685521327876587
 BoxCollider2D:
   m_ObjectHideFlags: 0
