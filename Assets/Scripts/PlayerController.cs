@@ -44,9 +44,10 @@ public class PlayerController : MonoBehaviour
         if (canMove && sprite != null && sprite.enabled) {
             if (x < 0) sprite.flipX = true;
             else if (x > 0) sprite.flipX = false;
+            animator.SetFloat("Speed", movement.sqrMagnitude);
+        } else if (!canMove) {
+            animator.SetFloat("Speed", 0);
         }
-
-        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     void FixedUpdate() {
