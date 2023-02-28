@@ -10,6 +10,8 @@ public class MoveableObject : MonoBehaviour
     void Start()
     {
         spawnpoint = transform.position;
+
+        GameManager.instance.AddMoveableObject(this);
     }
 
     public void ResetPositionToSpawnpoint() {
