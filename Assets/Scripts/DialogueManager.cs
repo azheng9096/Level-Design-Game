@@ -57,6 +57,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // end
+        textDisplay.color = new Color(textDisplay.color.r, textDisplay.color.g, textDisplay.color.b, 0);
         currDisplayCoroutine = null;
         yield break;
     }
