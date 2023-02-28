@@ -5212,7 +5212,7 @@ PrefabInstance:
     - target: {fileID: 3197603357741101004, guid: e289417b0b2fb5c4d8e80991455a0fbf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8772bf5f8c0390e46944742ea89c0ddc, type: 3}
+      objectReference: {fileID: 21300000, guid: 69930f9171a413f488cd1804a6b6d336, type: 3}
     - target: {fileID: 3197603357741101004, guid: e289417b0b2fb5c4d8e80991455a0fbf, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -5303,6 +5303,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1675798905}
     m_Modifications:
+    - target: {fileID: 4760251213703779856, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ca061f1f13071e4692535861d7cc3e3, type: 3}
+    - target: {fileID: 4760251213703779857, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.3333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4760251213703779857, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3333334
+      objectReference: {fileID: 0}
     - target: {fileID: 4760251213703779858, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
       propertyPath: m_Name
       value: Closet (1)
@@ -21303,7 +21315,7 @@ PrefabInstance:
     - target: {fileID: 2489486711929199637, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1224912085, guid: c8a30ddf8670cb94f905b3436ca21fb8, type: 3}
+      objectReference: {fileID: -1447397197, guid: 24ee7d9e9df742f4abbf068f08c2b17a, type: 3}
     - target: {fileID: 2489486711929199638, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -21355,11 +21367,11 @@ PrefabInstance:
     - target: {fileID: 2489486711929199641, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
       propertyPath: releasedSprite
       value: 
-      objectReference: {fileID: -1224912085, guid: c8a30ddf8670cb94f905b3436ca21fb8, type: 3}
+      objectReference: {fileID: -1447397197, guid: 24ee7d9e9df742f4abbf068f08c2b17a, type: 3}
     - target: {fileID: 2489486711929199641, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
       propertyPath: onPressedSprite
       value: 
-      objectReference: {fileID: -500710298, guid: c8a30ddf8670cb94f905b3436ca21fb8, type: 3}
+      objectReference: {fileID: -12482352, guid: 24ee7d9e9df742f4abbf068f08c2b17a, type: 3}
     - target: {fileID: 2489486711929199642, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
       propertyPath: m_Name
       value: Trigger Locked Item Trigger
@@ -21385,7 +21397,7 @@ PrefabInstance:
     - target: {fileID: 6630752992919805680, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 895283439, guid: b0bac4a3ab94e914e9fa7561b688e18b, type: 3}
+      objectReference: {fileID: 1280404082, guid: b0bac4a3ab94e914e9fa7561b688e18b, type: 3}
     - target: {fileID: 6630752992919805680, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -21602,6 +21614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1839468344}
     m_Modifications:
+    - target: {fileID: 4760251213703779856, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c20bee99ca45830459433f681c185411, type: 3}
     - target: {fileID: 4760251213703779858, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
       propertyPath: m_Name
       value: Closet
@@ -21664,6 +21680,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1675798905}
     m_Modifications:
+    - target: {fileID: 4760251213703779856, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4760251213703779856, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ca061f1f13071e4692535861d7cc3e3, type: 3}
     - target: {fileID: 4760251213703779858, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
       propertyPath: m_Name
       value: Closet
@@ -21674,7 +21698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4760251213703779863, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.25
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 4760251213703779863, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21941,6 +21965,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1839468344}
     m_Modifications:
+    - target: {fileID: 4760251213703779856, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c20bee99ca45830459433f681c185411, type: 3}
     - target: {fileID: 4760251213703779858, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
       propertyPath: m_Name
       value: Closet (1)
@@ -22304,7 +22332,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -22550,8 +22578,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
-  m_Sprite: {fileID: -1825591214, guid: 3a22ace2df0f11842bda1223f4204f6f, type: 3}
+  m_SortingOrder: 8
+  m_Sprite: {fileID: -512751420, guid: 3a22ace2df0f11842bda1223f4204f6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22612,7 +22640,7 @@ PrefabInstance:
     - target: {fileID: 3197603357741101004, guid: e289417b0b2fb5c4d8e80991455a0fbf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8772bf5f8c0390e46944742ea89c0ddc, type: 3}
+      objectReference: {fileID: 21300000, guid: 69930f9171a413f488cd1804a6b6d336, type: 3}
     - target: {fileID: 3197603357741101004, guid: e289417b0b2fb5c4d8e80991455a0fbf, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -32587,6 +32615,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1839468344}
     m_Modifications:
+    - target: {fileID: 2489486711929199637, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1224912085, guid: c8a30ddf8670cb94f905b3436ca21fb8, type: 3}
     - target: {fileID: 2489486711929199638, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -32635,6 +32667,14 @@ PrefabInstance:
       propertyPath: interactable
       value: 
       objectReference: {fileID: 1898874859}
+    - target: {fileID: 2489486711929199641, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
+      propertyPath: releasedSprite
+      value: 
+      objectReference: {fileID: -1224912085, guid: c8a30ddf8670cb94f905b3436ca21fb8, type: 3}
+    - target: {fileID: 2489486711929199641, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
+      propertyPath: onPressedSprite
+      value: 
+      objectReference: {fileID: -500710298, guid: c8a30ddf8670cb94f905b3436ca21fb8, type: 3}
     - target: {fileID: 2489486711929199642, guid: 69a8e2e3bd3909248b26adc51bf41f58, type: 3}
       propertyPath: m_Name
       value: Trigger Locked Item Trigger
@@ -33268,7 +33308,7 @@ PrefabInstance:
     - target: {fileID: 3197603357741101004, guid: e289417b0b2fb5c4d8e80991455a0fbf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 597962080, guid: ee6912e99347bb04596fabce20bcac92, type: 3}
+      objectReference: {fileID: -1222863910, guid: ee6912e99347bb04596fabce20bcac92, type: 3}
     - target: {fileID: 3197603357741101004, guid: e289417b0b2fb5c4d8e80991455a0fbf, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -33374,7 +33414,7 @@ PrefabInstance:
     - target: {fileID: 6630752992919805680, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1280404082, guid: b0bac4a3ab94e914e9fa7561b688e18b, type: 3}
+      objectReference: {fileID: 895283439, guid: b0bac4a3ab94e914e9fa7561b688e18b, type: 3}
     - target: {fileID: 6630752992919805680, guid: a25a6e9d9f9dda940977b3aa2f702ad8, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -33551,7 +33591,7 @@ PrefabInstance:
     - target: {fileID: 7357685521327876586, guid: 7f7839ac72d5923458cffca8f0eb07fa, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 895283439, guid: b0bac4a3ab94e914e9fa7561b688e18b, type: 3}
+      objectReference: {fileID: 1280404082, guid: b0bac4a3ab94e914e9fa7561b688e18b, type: 3}
     - target: {fileID: 7357685521327876586, guid: 7f7839ac72d5923458cffca8f0eb07fa, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -34183,6 +34223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Closet Graphic
       objectReference: {fileID: 0}
+    - target: {fileID: 5445192965475709942, guid: 320d5e300bb6cb046bb0934434c28f5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1825591214, guid: 3a22ace2df0f11842bda1223f4204f6f, type: 3}
     - target: {fileID: 5445192965475709943, guid: 320d5e300bb6cb046bb0934434c28f5d, type: 3}
       propertyPath: m_RootOrder
       value: 3
