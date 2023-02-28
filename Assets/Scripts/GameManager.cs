@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+        // jank, but fix later
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -34,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.R)) {
-            player.ResetPositionToSpawnpoint();   
+            ResetLevel();   
         }
     }
 
@@ -59,9 +62,5 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void MainMenu() {
-
     }
 }

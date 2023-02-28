@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 161170941365456773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.8181, y: -2.4319, z: 0}
-  m_LocalScale: {x: 0.44332352, y: 0.44332352, z: 0.44332352}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -1447397197, guid: 24ee7d9e9df742f4abbf068f08c2b17a, type: 3}
   m_Color: {r: 0.7075472, g: 0.6570732, b: 0.13616943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,3 +126,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectTag: ExperimentalTriggerObj
   door: {fileID: 0}
+  releasedSprite: {fileID: -1447397197, guid: 24ee7d9e9df742f4abbf068f08c2b17a, type: 3}
+  onPressedSprite: {fileID: -12482352, guid: 24ee7d9e9df742f4abbf068f08c2b17a, type: 3}
