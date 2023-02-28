@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
-        // jank, but fix later
+        // jank, but fix later maybe
         Time.timeScale = 1;
     }
 
@@ -62,5 +62,9 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Replay() {
+        SceneManager.LoadScene(0);
     }
 }
