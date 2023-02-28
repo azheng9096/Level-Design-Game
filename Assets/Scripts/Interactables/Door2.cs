@@ -43,7 +43,7 @@ public class Door2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GameObject.FindGameObjectWithTag("Player")?.GetComponent<AudioSource>();
+        audioSource = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
 
         OnUnlockCallback += PlayDoorUnlockedSound;
 

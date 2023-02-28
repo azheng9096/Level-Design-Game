@@ -27,7 +27,7 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GameObject.FindGameObjectWithTag("Player")?.GetComponent<AudioSource>();
+        audioSource = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,7 +56,7 @@ public class Door : MonoBehaviour
                 Destroy(gameObject);
             } else {
                 DialogueManager.instance.DisplayText(lockedDialogue);
-                
+
                 // play lock audio
                 if (audioSource != null && lockedAudio != null) {
                     audioSource.PlayOneShot(lockedAudio);

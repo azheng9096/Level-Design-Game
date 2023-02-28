@@ -15,7 +15,7 @@ public class InteractablePickUp : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        audioSource = GameObject.FindGameObjectWithTag("Player")?.GetComponent<AudioSource>();
+        audioSource = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
