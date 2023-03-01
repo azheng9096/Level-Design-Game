@@ -18,10 +18,16 @@ public class Door : MonoBehaviour
     // particle
     [SerializeField] ParticleSystem particle;
 
+    // dialogue
+    [SerializeField] string lockedDialogue;
+
+    // other instance
+    [SerializeField] Door otherInstance;
+
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GameObject.FindGameObjectWithTag("Player")?.GetComponent<AudioSource>();
+        audioSource = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,8 +49,14 @@ public class Door : MonoBehaviour
                     particle.gameObject.transform.SetParent(null);
                 }
 
+                // destroy the other instance if it exists
+                if (otherInstance != null)
+                    Destroy(otherInstance.gameObject);
+
                 Destroy(gameObject);
             } else {
+                DialogueManager.instance.DisplayText(lockedDialogue);
+
                 // play lock audio
                 if (audioSource != null && lockedAudio != null) {
                     audioSource.PlayOneShot(lockedAudio);

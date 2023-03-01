@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: BlueKey
   m_EditorClassIdentifier: 
   itemName: Blue Key
-  sprite: {fileID: 21300000, guid: 0333605ec1fef4a4480505d5422fffe9, type: 3}
+  sprite: {fileID: -1079676669, guid: ed4fead26b5328048abdd06791462946, type: 3}
   pickUpAudio: {fileID: 0}
   detailSprite: {fileID: 0}
   description: Opens a door
+  pickUpDialogue: I found a Blue Key

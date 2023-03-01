@@ -25,6 +25,12 @@ public class Patrol : MonoBehaviour
     GameObject player;
     PlayerController playerController;
 
+    // for animation
+    [SerializeField] GameObject spriteHolder;
+    SpriteRenderer sprite;
+    Animator animator;
+    [SerializeField] bool spriteIsFacingRight = true;
+
     void Start()
     {
         prevCoroutine = StartCoroutine(MovingToNextWaypoint());
@@ -36,7 +42,13 @@ public class Patrol : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         player = GameObject.FindGameObjectWithTag("Player");
-        playerController = player?.GetComponent<PlayerController>();
+        if (player != null)
+            playerController = player.GetComponent<PlayerController>();
+
+        if (spriteHolder != null) {
+            sprite = spriteHolder.GetComponent<SpriteRenderer>();
+            animator = spriteHolder.GetComponent<Animator>();
+        }
     }
 
     void Update() {
@@ -52,12 +64,36 @@ public class Patrol : MonoBehaviour
 
         while (Vector3.Distance(transform.position, wp.position) > 0.01f)
         {
+            float x_diff = wp.position.x - transform.position.x; // positive - right, negative - left
+
             transform.position = Vector3.MoveTowards(transform.position, wp.position, patrolSpeed * Time.deltaTime);
             transform.right = wp.position - transform.position;
+
+            if (spriteHolder != null) {
+                spriteHolder.transform.position = transform.position;
+
+                if (animator != null)
+                    animator.SetBool("isMoving", true);
+
+                if (sprite != null) {
+                    if (x_diff < 0) 
+                        sprite.flipX = spriteIsFacingRight;
+                    else if (x_diff > 0) 
+                        sprite.flipX = !spriteIsFacingRight;
+                }
+            }
+
             yield return null;
         }
 
         transform.position = wp.position;
+        if (spriteHolder != null) {
+            spriteHolder.transform.position = transform.position;
+
+            if (animator != null)
+                animator.SetBool("isMoving", false);
+        }
+
         yield return new WaitForSeconds(waitTime);
         currWaypointIndex = (currWaypointIndex + 1) % waypoints.Length;
 
@@ -72,7 +108,7 @@ public class Patrol : MonoBehaviour
             Vector3 aimDirection = transform.right;
             if (Vector3.Angle(aimDirection, dirToPlayer) < fov / 2f) {
                 // Player inside FOV
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                // GameManager.instance.RetryFromSpawnpoint();
             }
         }
     }

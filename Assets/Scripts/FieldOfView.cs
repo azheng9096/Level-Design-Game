@@ -12,11 +12,16 @@ public class FieldOfView : MonoBehaviour
     float viewDistance;
     float startingAngle;
 
+    // for enemies specifically
+    PlayerController player;
+
     // Start is called before the first frame update
     void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -36,12 +41,16 @@ public class FieldOfView : MonoBehaviour
         int triangleIndex = 0;
         for (int i = 0; i <= rayCount; i++) {
             Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask | (1 << LayerMask.NameToLayer("Player")));
             
             if (raycastHit2D.collider == null) {
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance;
             } else {
                 vertex = raycastHit2D.point;
+
+                if (raycastHit2D.collider.CompareTag("Player") && player.detectable) {
+                    GameManager.instance.RetryFromSpawnpoint();
+                }
             }
             
             vertices[vertexIndex] = vertex;
