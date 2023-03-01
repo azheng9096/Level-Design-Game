@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/anna_dev.unity
     guid: 4050759e832b6964aaf878d4eaebcb3f
   - enabled: 1
+    path: Assets/Scenes/level1.unity
+    guid: e185412d214204dff98addd13e7eacfd
+  - enabled: 1
     path: Assets/Scenes/level2.unity
     guid: eb313d47178c3a24181a61fc64bbe068
   m_configObjects: {}

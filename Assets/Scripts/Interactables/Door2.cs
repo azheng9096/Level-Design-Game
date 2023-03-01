@@ -66,6 +66,15 @@ public class Door2 : MonoBehaviour
     void Update()
     {
         if (autoBreakOnUnlock) {
+            if (canInteract && Input.GetKeyDown(KeyCode.Z)) {
+                DialogueManager.instance.DisplayText(lockedDialogue);
+
+                // play lock audio
+                if (audioSource != null && lockedAudio != null) {
+                    audioSource.PlayOneShot(lockedAudio);
+                }
+            }
+
             return;
         }
 

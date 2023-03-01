@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: 
   itemName: Hammer
-  sprite: {fileID: 21300000, guid: 33ff14f25f6592e4d807b3a5ed0ffdcd, type: 3}
+  sprite: {fileID: 21300000, guid: b3f803c4ff4ed344980c7522ef1e36e4, type: 3}
   pickUpAudio: {fileID: 0}
   detailSprite: {fileID: 0}
   description: Contains a hammer. It looks worn out, but it can still break something
