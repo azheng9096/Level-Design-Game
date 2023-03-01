@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014941172ba242c4fbf378dbed22d726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideCameraOffset: 0
+  newOffset: {x: 0, y: -2, z: -10}
 --- !u!1 &4760251215081478534
 GameObject:
   m_ObjectHideFlags: 0

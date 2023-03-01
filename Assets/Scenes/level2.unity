@@ -22433,6 +22433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Closet (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4760251213703779862, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: overrideCameraOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4760251213703779863, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -23342,6 +23346,10 @@ PrefabInstance:
     - target: {fileID: 6714619297896719101, guid: fc40b5a85d20edf48af9b09080e33493, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714619298959754528, guid: fc40b5a85d20edf48af9b09080e33493, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6714619298959754531, guid: fc40b5a85d20edf48af9b09080e33493, type: 3}
       propertyPath: m_AnchorMax.y
@@ -35034,6 +35042,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1839468344}
     m_Modifications:
+    - target: {fileID: 693265604345408735, guid: 320d5e300bb6cb046bb0934434c28f5d, type: 3}
+      propertyPath: overrideCameraOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5445192965475709936, guid: 320d5e300bb6cb046bb0934434c28f5d, type: 3}
       propertyPath: m_Name
       value: Closet Graphic

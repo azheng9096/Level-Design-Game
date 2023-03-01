@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Closet (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4760251213703779862, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
+      propertyPath: newOffset.y
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 4760251213703779863, guid: c322206ad4176db409e98c5c9e86d2b0, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -9,8 +9,12 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] float smoothTime = 0.25f;
     Vector3 currentVelocity;
 
+    Vector3 originalOffset;
+
     void Start() {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+
+        originalOffset = offset;
     }
 
     void FixedUpdate()
@@ -23,5 +27,13 @@ public class CameraFollow : MonoBehaviour
                 smoothTime
             );
         }
+    }
+
+    public void ResetOffset() {
+        offset = originalOffset;
+    }
+
+    public void SetNewOffset(Vector3 newOffset) {
+        offset = newOffset;
     }
 }

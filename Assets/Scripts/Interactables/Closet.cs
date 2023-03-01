@@ -13,11 +13,21 @@ public class Closet : MonoBehaviour
 
     PlayerController player;
 
+    
+    // optional camera offset change
+    [SerializeField] bool overrideCameraOffset = false;
+    [SerializeField] Vector3 newOffset = new Vector3(0, 5, -10);
+    CameraFollow cam;
+
     // Start is called before the first frame update
     void Start()
     {
         exitPosition = transform.GetChild(0).transform;
         player = GameObject.FindGameObjectWithTag("Player")?.GetComponent<PlayerController>();
+    
+        if (overrideCameraOffset) {
+            cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
+        }
     }
 
     // Update is called once per frame
@@ -30,10 +40,18 @@ public class Closet : MonoBehaviour
                 hidingPlayer = true;
                 player.Hide(true);
                 player.gameObject.transform.position = transform.position;
+
+                if (overrideCameraOffset && cam != null) {
+                    cam.SetNewOffset(newOffset);
+                }
             } else {
                 hidingPlayer = false;
                 player.gameObject.transform.position = exitPosition.position;
                 player.Hide(false);
+
+                if (overrideCameraOffset && cam != null) {
+                    cam.ResetOffset();
+                }
             }
         }
     }
